@@ -758,5 +758,92 @@ Y =
 %添加颜色条
 >> colorbar
 %将图的颜色变为灰色调
->> colormap fray
+>> colormap gray
+```
+### if、for、while control statements
+```
+>> v = zeros(10,1)
+v =
+
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+   0
+
+>> for i=1:10,
+v(i) = 2^i;
+end;
+>> v
+v =
+
+      2
+      4
+      8
+     16
+     32
+     64
+    128
+    256
+    512
+   1024
+   
+>> i=1;
+>> while i<=5,
+v(i)= 100;
+i = i+1;
+end;
+>> v
+v =
+
+    100
+    100
+    100
+    100
+    100
+     64
+    128
+    256
+    512
+   1024
+
+>> i = 1;
+>> while true,
+v(i) = 999;
+i = i+1;
+if i == 6,
+   break;
+end;
+end;
+
+>> v
+v =
+
+    999
+    999
+    999
+    999
+    999
+     64
+    128
+    256
+    512
+   1024
+
+>> v(1)
+ans =  999
+>> v(1) = 2;
+>> if v(1)==1,
+disp('The value is one')
+elseif v(1)==2,
+disp('The value is two')
+else
+disp('The value is something else')
+end;
+The value is two
 ```
