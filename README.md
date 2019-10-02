@@ -846,4 +846,15 @@ else
 disp('The value is something else')
 end;
 The value is two
+
+%
+>> cd 'E:\Machine-Learning\Octave'
+>> squareThisNumber(5)
+error: 'squareThisNumber' undefined near line 1 column 1
+>> cd 'E:\Machine-Learning\Octave\square.m'
+error: E:\Machine-Learning\Octave\square.m: Invalid argument
+>> cd 'square.m'
+error: square.m: Invalid argument
+>> squareThisNumber(5)
+ans =  25
 ```
